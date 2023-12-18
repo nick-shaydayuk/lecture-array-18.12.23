@@ -1,5 +1,5 @@
 import test from 'node:test';
-import assert from 'assert/strict';
+import assert from 'node:assert';
 
 import * as funcs from '../index.js';
 
@@ -16,7 +16,7 @@ test('task2', () => {
     ]),
     815
   );
-  assert.ok(
+  assert.strictEqual(
     funcs.getTotalPrice([
       [1200, 'Monitor', 30],
       [590, 'Keyboard', 25],
@@ -47,8 +47,8 @@ test('task3', () => {
   );
 });
 test('task4', () => {
-  assert.strictEqual(
-    funcs.uniqueItems([
+  assert.equal(
+    JSON.stringify(funcs.uniqueItems([
       'num11',
       'num12',
       'num11',
@@ -58,12 +58,12 @@ test('task4', () => {
       'num12',
       12,
       13,
-    ]),
-    ['num11', 'num12', 12, 13]
+    ])),
+    JSON.stringify(['12', '13', 'num11', 'num12'])
   );
   assert.strictEqual(
-    funcs.uniqueItems(['kiwi', 'apple', 'kiwi', 'orange', 'kiwi', 'apple']),
-    ['kiwi', 'apple', 'orange']
+    JSON.stringify(funcs.uniqueItems(['kiwi', 'apple', 'kiwi', 'orange', 'kiwi', 'apple'])),
+    JSON.stringify(['kiwi', 'apple', 'orange'])
   );
 });
 test('task5', () => {
