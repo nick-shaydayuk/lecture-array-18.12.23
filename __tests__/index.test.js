@@ -47,7 +47,7 @@ test('task3', () => {
   );
 });
 test('task4', () => {
-  assert.ok(
+  assert.strictEqual(
     funcs.uniqueItems([
       'num11',
       'num12',
@@ -61,13 +61,13 @@ test('task4', () => {
     ]),
     ['num11', 'num12', 12, 13]
   );
-  assert.ok(
+  assert.strictEqual(
     funcs.uniqueItems(['kiwi', 'apple', 'kiwi', 'orange', 'kiwi', 'apple']),
     ['kiwi', 'apple', 'orange']
   );
 });
 test('task5', () => {
-  assert.ok(funcs.getFavoritePizza([
+  assert.strictEqual(funcs.getFavoritePizza([
     { name: 'alex', pizzas: ['cheese', 'pepperoni'] },
     { name: 'mike', pizzas: ['salami', 'cheese'] },
     { name: 'stas', pizzas: ['pepperoni'] },
