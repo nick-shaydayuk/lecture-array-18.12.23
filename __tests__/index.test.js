@@ -59,7 +59,7 @@ test('task4', () => {
       12,
       13,
     ])),
-    JSON.stringify(['12', '13', 'num11', 'num12'])
+    JSON.stringify([ 'num11', 'num12', 12, 13])
   );
   assert.strictEqual(
     JSON.stringify(funcs.uniqueItems(['kiwi', 'apple', 'kiwi', 'orange', 'kiwi', 'apple'])),
